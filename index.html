@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Autóbérlés - Demo</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100 text-gray-800">
+  <!-- Header -->
+  <header class="bg-white shadow-md">
+    <div class="max-w-6xl mx-auto px-4 flex justify-between items-center h-16">
+      <h1 class="text-xl font-bold text-blue-600">AutoRent</h1>
+      <nav class="hidden md:flex space-x-6">
+        <a href="#home" class="hover:text-blue-600">Kezdőlap</a>
+        <a href="#services" class="hover:text-blue-600">Szolgáltatások</a>
+        <a href="#cars" class="hover:text-blue-600">Autóink</a>
+        <a href="#contact" class="hover:text-blue-600">Kapcsolat</a>
+      </nav>
+      <!-- Mobil menü ikon -->
+      <button class="md:hidden text-2xl">☰</button>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <section id="home" class="bg-blue-600 text-white text-center py-20 px-4">
+    <h2 class="text-3xl md:text-5xl font-bold mb-4">Autóbérlés egyszerűen</h2>
+    <p class="mb-6 text-lg">Olcsó árak, gyors ügyintézés, megbízható autók.</p>
+    <a href="#cars" class="bg-white text-blue-600 px-6 py-3 rounded-lg font-semibold shadow hover:bg-gray-200">
+      Nézd meg az autókat
+    </a>
+  </section>
+
+  <!-- Szolgáltatások -->
+  <section id="services" class="max-w-6xl mx-auto py-16 px-4">
+    <h3 class="text-2xl font-bold text-center mb-10">Miért minket válassz?</h3>
+    <div class="grid md:grid-cols-3 gap-8 text-center">
+      <div class="bg-white p-6 rounded-lg shadow hover:shadow-lg">
+        <h4 class="font-bold text-lg mb-2">Kedvező árak</h4>
+        <p>Rugalmas díjszabás rövid- és hosszútávra.</p>
+      </div>
+      <div class="bg-white p-6 rounded-lg shadow hover:shadow-lg">
+        <h4 class="font-bold text-lg mb-2">Széles választék</h4>
+        <p>Kisautótól a családi SUV-ig, mindenre van megoldás.</p>
+      </div>
+      <div class="bg-white p-6 rounded-lg shadow hover:shadow-lg">
+        <h4 class="font-bold text-lg mb-2">Gyors ügyintézés</h4>
+        <p>Online foglalás és azonnali visszaigazolás.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Autólista -->
+  <section id="cars" class="bg-gray-50 py-16 px-4">
+    <h3 class="text-2xl font-bold text-center mb-10">Autóink</h3>
+    <div class="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+      <!-- Autó kártya -->
+      <div class="bg-white rounded-lg shadow hover:shadow-lg overflow-hidden">
+        <img src="https://via.placeholder.com/400x200" alt="Autó" class="w-full">
+        <div class="p-4">
+          <h4 class="font-bold text-lg">Toyota Corolla</h4>
+          <p class="text-sm text-gray-600">Napi díj: 12 000 Ft</p>
+        </div>
+      </div>
+      <div class="bg-white rounded-lg shadow hover:shadow-lg overflow-hidden">
+        <img src="https://via.placeholder.com/400x200" alt="Autó" class="w-full">
+        <div class="p-4">
+          <h4 class="font-bold text-lg">Ford Focus</h4>
+          <p class="text-sm text-gray-600">Napi díj: 11 000 Ft</p>
+        </div>
+      </div>
+      <div class="bg-white rounded-lg shadow hover:shadow-lg overflow-hidden">
+        <img src="https://via.placeholder.com/400x200" alt="Autó" class="w-full">
+        <div class="p-4">
+          <h4 class="font-bold text-lg">BMW X3</h4>
+          <p class="text-sm text-gray-600">Napi díj: 20 000 Ft</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Kapcsolat -->
+  <section id="contact" class="max-w-3xl mx-auto py-16 px-4">
+    <h3 class="text-2xl font-bold text-center mb-6">Kapcsolatfelvétel</h3>
+    <form class="bg-white shadow rounded-lg p-6 space-y-4">
+      <input type="text" placeholder="Név" class="w-full border rounded p-2">
+      <input type="email" placeholder="Email" class="w-full border rounded p-2">
+      <textarea placeholder="Üzenet" class="w-full border rounded p-2"></textarea>
+      <button type="submit" class="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700">
+        Küldés
+      </button>
+    </form>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-gray-800 text-white text-center py-6">
+    <p>&copy; 2025 AutoRent. Minden jog fenntartva.</p>
+  </footer>
+</body>
+</html>
