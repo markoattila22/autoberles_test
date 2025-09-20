@@ -7,7 +7,6 @@
   <script src="https://cdn.tailwindcss.com"></script>
 </head>
 <body class="bg-gray-100 text-gray-800">
-  <!-- Header -->
   <header class="bg-white shadow-md">
     <div class="max-w-6xl mx-auto px-4 flex justify-between items-center h-16">
       <h1 class="text-xl font-bold text-blue-600">AutoRent</h1>
@@ -17,12 +16,18 @@
         <a href="#cars" class="hover:text-blue-600">Autóink</a>
         <a href="#contact" class="hover:text-blue-600">Kapcsolat</a>
       </nav>
-      <!-- Mobil menü ikon -->
-      <button class="md:hidden text-2xl">☰</button>
+      <button id="mobile-menu-btn" class="md:hidden text-2xl">☰</button>
     </div>
+    <nav id="mobile-menu" class="hidden bg-white shadow-lg md:hidden">
+      <div class="px-4 py-2 space-y-2">
+        <a href="#home" class="block py-2 hover:text-blue-600 border-b">Kezdőlap</a>
+        <a href="#services" class="block py-2 hover:text-blue-600 border-b">Szolgáltatások</a>
+        <a href="#cars" class="block py-2 hover:text-blue-600 border-b">Autóink</a>
+        <a href="#contact" class="block py-2 hover:text-blue-600">Kapcsolat</a>
+      </div>
+    </nav>
   </header>
 
-  <!-- Hero -->
   <section id="home" class="bg-blue-600 text-white text-center py-20 px-4">
     <h2 class="text-3xl md:text-5xl font-bold mb-4">Autóbérlés egyszerűen</h2>
     <p class="mb-6 text-lg">Olcsó árak, gyors ügyintézés, megbízható autók.</p>
@@ -31,7 +36,6 @@
     </a>
   </section>
 
-  <!-- Szolgáltatások -->
   <section id="services" class="max-w-6xl mx-auto py-16 px-4">
     <h3 class="text-2xl font-bold text-center mb-10">Miért minket válassz?</h3>
     <div class="grid md:grid-cols-3 gap-8 text-center">
@@ -50,11 +54,9 @@
     </div>
   </section>
 
-  <!-- Autólista -->
   <section id="cars" class="bg-gray-50 py-16 px-4">
     <h3 class="text-2xl font-bold text-center mb-10">Autóink</h3>
     <div class="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
-      <!-- Autó kártya -->
       <div class="bg-white rounded-lg shadow hover:shadow-lg overflow-hidden">
         <img src="https://placehold.co/400x200/EEE/31343C" alt="Autó" class="w-full">
         <div class="p-4">
@@ -79,7 +81,6 @@
     </div>
   </section>
 
-  <!-- Kapcsolat -->
   <section id="contact" class="max-w-3xl mx-auto py-16 px-4">
     <h3 class="text-2xl font-bold text-center mb-6">Kapcsolatfelvétel</h3>
     <form class="bg-white shadow rounded-lg p-6 space-y-4">
@@ -92,9 +93,33 @@
     </form>
   </section>
 
-  <!-- Footer -->
   <footer class="bg-gray-800 text-white text-center py-6">
     <p>&copy; 2025 AutoRent. Minden jog fenntartva.</p>
   </footer>
+
+  <script>
+    const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+    const mobileMenu = document.getElementById('mobile-menu');
+    
+    mobileMenuBtn.addEventListener('click', function() {
+      mobileMenu.classList.toggle('hidden');
+      mobileMenuBtn.textContent = mobileMenu.classList.contains('hidden') ? '☰' : '✖';
+    });
+    
+    const mobileMenuLinks = mobileMenu.querySelectorAll('a');
+    mobileMenuLinks.forEach(link => {
+      link.addEventListener('click', function() {
+        mobileMenu.classList.add('hidden');
+        mobileMenuBtn.textContent = '☰';
+      });
+    });
+    
+    window.addEventListener('resize', function() {
+      if (window.innerWidth >= 768) {
+        mobileMenu.classList.add('hidden');
+        mobileMenuBtn.textContent = '☰';
+      }
+    });
+  </script>
 </body>
 </html>
