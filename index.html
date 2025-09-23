@@ -1,125 +1,241 @@
 <!DOCTYPE html>
 <html lang="hu">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Autóbérlés - Demo</title>
-  <script src="https://cdn.tailwindcss.com"></script>
-</head>
-<body class="bg-gray-100 text-gray-800">
-  <header class="bg-white shadow-md">
-    <div class="max-w-6xl mx-auto px-4 flex justify-between items-center h-16">
-      <a href="#" class="text-xl font-bold text-blue-600">AutoRent</a>
-      <nav class="hidden md:flex space-x-6">
-        <a href="#home" class="hover:text-blue-600">Kezdőlap</a>
-        <a href="#services" class="hover:text-blue-600">Szolgáltatások</a>
-        <a href="#cars" class="hover:text-blue-600">Autóink</a>
-        <a href="#contact" class="hover:text-blue-600">Kapcsolat</a>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>HybridRent</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body class="bg-gray-100 text-gray-800">
+    <header class="bg-white shadow-md">
+      <div
+        class="max-w-6xl mx-auto px-4 flex justify-between items-center h-16"
+      >
+        <h1 class="text-xl font-bold text-green-600">HybridRent</h1>
+        <div class="flex items-center gap-6">
+          <nav class="hidden md:flex space-x-6">
+            <a href="#host" class="hover:text-green-600">Rólam</a>
+            <a href="#cars" class="hover:text-green-600">Autóink</a>
+          </nav>
+          <a
+            href="https://rentben.com/hu/public-profile/50305"
+            target="_blank"
+            class="hidden md:inline-flex items-center px-3 py-1 rounded-lg text-white text-sm font-medium hover:opacity-90"
+            style="background-color: #1f0d63"
+          >
+            Rent<span style="color: #46ca76">Ben</span>
+          </a>
+          <button id="mobile-menu-btn" class="md:hidden text-2xl">☰</button>
+        </div>
+      </div>
+      <nav id="mobile-menu" class="hidden bg-white shadow-lg md:hidden">
+        <div class="px-4 py-2 space-y-2">
+          <a
+            href="#host"
+            class="block py-2 hover:text-green-600 border-b text-center"
+            >Rólam</a
+          >
+          <a
+            href="#cars"
+            class="block py-2 hover:text-green-600 border-b text-center"
+            >Autóink</a
+          >
+          <a
+            href="https://rentben.com/hu/public-profile/50305"
+            target="_blank"
+            class="flex items-center justify-center py-3 mt-2 rounded-lg text-white text-sm font-medium hover:opacity-90"
+            style="background-color: #1f0d63"
+          >
+            Rent<span style="color: #46ca76">Ben</span>
+          </a>
+        </div>
       </nav>
-      <button id="mobile-menu-btn" class="md:hidden text-2xl">☰</button>
-    </div>
-    <nav id="mobile-menu" class="hidden bg-white shadow-lg md:hidden">
-      <div class="px-4 py-2 space-y-2">
-        <a href="#home" class="block py-2 hover:text-blue-600 border-b">Kezdőlap</a>
-        <a href="#services" class="block py-2 hover:text-blue-600 border-b">Szolgáltatások</a>
-        <a href="#cars" class="block py-2 hover:text-blue-600 border-b">Autóink</a>
-        <a href="#contact" class="block py-2 hover:text-blue-600">Kapcsolat</a>
-      </div>
-    </nav>
-  </header>
+    </header>
 
-  <section id="home" class="bg-blue-600 text-white text-center py-20 px-4">
-    <h2 class="text-3xl md:text-5xl font-bold mb-4">Autóbérlés egyszerűen</h2>
-    <p class="mb-6 text-lg">Olcsó árak, gyors ügyintézés, megbízható autók.</p>
-    <a href="#cars" class="bg-white text-blue-600 px-6 py-3 rounded-lg font-semibold shadow hover:bg-gray-200">
-      Nézd meg az autókat
-    </a>
-  </section>
+    <section id="home" class="bg-green-600 text-white text-center py-20 px-4">
+      <h2 class="text-3xl md:text-5xl font-bold mb-4">Autóbérlés egyszerűen</h2>
+      <p class="mb-6 text-lg">Olcsó árak, megbízható autók.</p>
+      <a
+        href="#cars"
+        class="bg-white text-green-600 px-6 py-3 rounded-lg font-semibold shadow hover:bg-gray-200"
+      >
+        Nézd meg az autókat
+      </a>
+    </section>
 
-  <section id="services" class="max-w-6xl mx-auto py-16 px-4">
-    <h3 class="text-2xl font-bold text-center mb-10">Miért minket válassz?</h3>
-    <div class="grid md:grid-cols-3 gap-8 text-center">
-      <div class="bg-white p-6 rounded-lg shadow hover:shadow-lg">
-        <h4 class="font-bold text-lg mb-2">Kedvező árak</h4>
-        <p>Rugalmas díjszabás rövid- és hosszútávra.</p>
-      </div>
-      <div class="bg-white p-6 rounded-lg shadow hover:shadow-lg">
-        <h4 class="font-bold text-lg mb-2">Széles választék</h4>
-        <p>Kisautótól a családi SUV-ig, mindenre van megoldás.</p>
-      </div>
-      <div class="bg-white p-6 rounded-lg shadow hover:shadow-lg">
-        <h4 class="font-bold text-lg mb-2">Gyors ügyintézés</h4>
-        <p>Online foglalás és azonnali visszaigazolás.</p>
-      </div>
-    </div>
-  </section>
+    <section id="host" class="max-w-6xl mx-auto py-16 px-4">
+      <div
+        class="lg:col-span-2 bg-white rounded-2xl shadow p-6 border-2"
+        style="border-color: #46ca76"
+      >
+        <div class="flex items-center justify-center gap-4">
+          <img
+            src="./images/sanyi.jpg"
+            alt="Sandor"
+            class="w-24 h-24 rounded-full object-cover ring-2 ring-green-100"
+          />
+          <div>
+            <div class="flex items-center gap-2">
+              <h4 class="text-2xl font-bold">Sandor</h4>
+              <span
+                class="inline-flex items-center justify-center w-6 h-6 rounded-full bg-green-100 text-green-700 text-sm"
+                >✔</span
+              >
+            </div>
+            <div class="mt-1 text-sm text-gray-600 flex items-center gap-2">
+              <span
+                class="inline-flex items-center gap-1 px-2 py-0.5 rounded-full bg-emerald-50 text-emerald-700 border border-emerald-200"
+              >
+                <span class="text-base">💎</span> PRO bérbeadó
+              </span>
+            </div>
+          </div>
+        </div>
+        <h3 class="text-xl font-bold mb-4 pt-2 text-center md:text-left">
+          Helló, Sandor vagyok!
+        </h3>
+        <p class="leading-7">
+          Üdvözöllek, és köszönöm, hogy benéztél! Magánszemélyként adom bérbe
+          autóimat Sopronból, főként rövid és középtávú bérlésekre. Fontos
+          számomra a kölcsönös bizalom és a korrekt együttműködés. Rugalmas
+          vagyok az átadás-átvételben, és szívesen segítek, ha kérdésed van az
+          autóval vagy az utazással kapcsolatban.
+        </p>
+        <ul class="mt-4 space-y-2">
+          <h3 class="text-xl font-bold mb-4">A flottám jelenleg:</h3>
+          <li>
+            • <strong>Toyota Prius+</strong> - 7 személyes, hibrid, ideális
+            családi kirándulásokhoz.
+          </li>
+          <li>
+            • <strong>Toyota Auris Hybrid</strong> - gazdaságos, kényelmes,
+            megbízható városi/vidéki használatra.
+          </li>
+        </ul>
+        <p class="leading-7 mt-6">
+          Autóimat folyamatosan karbantartom, tisztán, tankolva adom át, és
+          ugyanezt kérem vissza.
+          <br /><strong>Átvétel:</strong> Sopron belváros, vasútállomás vagy
+          megbeszélés szerint. <br /><strong>Rugalmasság:</strong> akár hétvégén
+          és késő délután is. Saját autódat nálam hagyhatod a bérlés idejére,
+          díjmentes, zárt parkolóban.
+        </p>
 
-  <section id="cars" class="bg-gray-50 py-16 px-4">
-    <h3 class="text-2xl font-bold text-center mb-10">Autóink</h3>
-    <div class="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
-      <div class="bg-white rounded-lg shadow hover:shadow-lg overflow-hidden">
-        <img src="https://placehold.co/400x200/EEE/31343C" alt="Autó" class="w-full">
-        <div class="p-4">
-          <h4 class="font-bold text-lg">Toyota Corolla</h4>
-          <p class="text-sm text-gray-600">Napi díj: 12 000 Ft</p>
+        <div class="mt-6">
+          <span class="text-sm text-gray-600">Beszélt nyelvek:</span>
+          <div class="mt-2 flex flex-wrap gap-2">
+            <span class="px-2 py-1 rounded-full text-sm bg-gray-100"
+              >Magyar</span
+            >
+            <span class="px-2 py-1 rounded-full text-sm bg-gray-100"
+              >English</span
+            >
+            <span class="px-2 py-1 rounded-full text-sm bg-gray-100"
+              >Deutsch</span
+            >
+          </div>
         </div>
       </div>
-      <div class="bg-white rounded-lg shadow hover:shadow-lg overflow-hidden">
-        <img src="https://placehold.co/400x200/EEE/31343C" alt="Autó" class="w-full">
-        <div class="p-4">
-          <h4 class="font-bold text-lg">Ford Focus</h4>
-          <p class="text-sm text-gray-600">Napi díj: 11 000 Ft</p>
-        </div>
+    </section>
+
+    <section id="cars" class="pb-8 px-4">
+      <h3 class="text-2xl font-bold text-center mb-10">Autóink</h3>
+      <div class="grid md:grid-cols-2 gap-8 max-w-6xl mx-auto">
+        <a
+          href="https://rentben.com/hu/car/3266"
+          target="_blank"
+          class="bg-white rounded-lg shadow hover:shadow-lg overflow-hidden block"
+        >
+          <img
+            src="./images/corolla.webp"
+            alt="Toyota Prius+"
+            class="w-full h-75 object-cover"
+            style="aspect-ratio: 16/12"
+          />
+          <div class="p-4">
+            <h4 class="font-bold text-lg mb-3">Toyota Prius+</h4>
+            <div
+              class="flex rounded-lg overflow-hidden text-white font-bold text-sm"
+            >
+              <div
+                class="flex-1 py-2 px-3 text-center"
+                style="background-color: #1f0d63"
+              >
+                14 900 Ft <span class="text-xs font-normal">/nap</span>
+              </div>
+            </div>
+          </div>
+        </a>
+        <a
+          href="https://rentben.com/hu/car/3296"
+          target="_blank"
+          class="bg-white rounded-lg shadow hover:shadow-lg overflow-hidden block"
+        >
+          <img
+            src="./images/auris.webp"
+            alt="Toyota Auris"
+            class="w-full h-75 object-cover"
+            style="aspect-ratio: 16/12"
+          />
+          <div class="p-4">
+            <h4 class="font-bold text-lg mb-3">Toyota Auris</h4>
+            <div
+              class="flex rounded-lg overflow-hidden text-white font-bold text-sm"
+            >
+              <div
+                class="flex-1 py-2 px-3 text-center"
+                style="background-color: #1f0d63"
+              >
+                13 400 Ft <span class="text-xs font-normal">/nap</span>
+              </div>
+            </div>
+          </div>
+        </a>
       </div>
-      <div class="bg-white rounded-lg shadow hover:shadow-lg overflow-hidden">
-        <img src="https://placehold.co/400x200/EEE/31343C" alt="Autó" class="w-full">
-        <div class="p-4">
-          <h4 class="font-bold text-lg">BMW X3</h4>
-          <p class="text-sm text-gray-600">Napi díj: 20 500 Ft</p>
-        </div>
-      </div>
+    </section>
+
+    <div class="mt-6 pb-12 flex justify-center px-4">
+      <a
+        href="https://rentben.com/hu/public-profile/50305"
+        target="_blank"
+        class="inline-flex items-center gap-3 px-20 py-6 rounded-xl text-white hover:opacity-90 shadow-lg font-bold text-xl transform hover:scale-105 transition-all duration-200"
+        style="background-color: #1f0d63"
+      >
+        <span
+          >Rent<span style="color: #46ca76">Ben</span> Profil megtekintése</span
+        >
+      </a>
     </div>
-  </section>
 
-  <section id="contact" class="max-w-3xl mx-auto py-16 px-4">
-    <h3 class="text-2xl font-bold text-center mb-6">Kapcsolatfelvétel</h3>
-    <form class="bg-white shadow rounded-lg p-6 space-y-4">
-      <input type="text" placeholder="Név" class="w-full border rounded p-2">
-      <input type="email" placeholder="Email" class="w-full border rounded p-2">
-      <textarea placeholder="Üzenet" class="w-full border rounded p-2"></textarea>
-      <button type="submit" class="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700">
-        Küldés
-      </button>
-    </form>
-  </section>
+    <footer class="bg-green-600 text-white text-center py-6 font-bold">
+      <p>&copy; 2025 HybridRent. Minden jog fenntartva.</p>
+    </footer>
 
-  <footer class="bg-gray-800 text-white text-center py-6">
-    <p>2025 Markó Attila</p>
-  </footer>
+    <script>
+      const mobileMenuBtn = document.getElementById("mobile-menu-btn");
+      const mobileMenu = document.getElementById("mobile-menu");
 
-  <script>
-    const mobileMenuBtn = document.getElementById('mobile-menu-btn');
-    const mobileMenu = document.getElementById('mobile-menu');
-    
-    mobileMenuBtn.addEventListener('click', function() {
-      mobileMenu.classList.toggle('hidden');
-      mobileMenuBtn.textContent = mobileMenu.classList.contains('hidden') ? '☰' : '✖';
-    });
-    
-    const mobileMenuLinks = mobileMenu.querySelectorAll('a');
-    mobileMenuLinks.forEach(link => {
-      link.addEventListener('click', function() {
-        mobileMenu.classList.add('hidden');
-        mobileMenuBtn.textContent = '☰';
+      mobileMenuBtn.addEventListener("click", function () {
+        mobileMenu.classList.toggle("hidden");
+        mobileMenuBtn.textContent = mobileMenu.classList.contains("hidden")
+          ? "☰"
+          : "✖";
       });
-    });
-    
-    window.addEventListener('resize', function() {
-      if (window.innerWidth >= 768) {
-        mobileMenu.classList.add('hidden');
-        mobileMenuBtn.textContent = '☰';
-      }
-    });
-  </script>
-</body>
+
+      const mobileMenuLinks = mobileMenu.querySelectorAll("a");
+      mobileMenuLinks.forEach((link) => {
+        link.addEventListener("click", function () {
+          mobileMenu.classList.add("hidden");
+          mobileMenuBtn.textContent = "☰";
+        });
+      });
+
+      window.addEventListener("resize", function () {
+        if (window.innerWidth >= 768) {
+          mobileMenu.classList.add("hidden");
+          mobileMenuBtn.textContent = "☰";
+        }
+      });
+    </script>
+  </body>
 </html>
